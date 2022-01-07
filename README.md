@@ -73,4 +73,17 @@ Modos/Ejemplos de uso:
 La modificación de los parámetros se realiza de forma similar a lo explicado anteriormente, solo que ahora los mismos se declaran dentro del manifiesto **docker-compose.yml**, en la sección **command**.
 Cabe destacar que el resultado de dicha ejecución se exporta en un volumen llamado **data** (se ubica en el mismo path que el resto de los archivos).
 
+Si se realiza algún cambio en los valores de ejecución del script o simplemente en el manifiesto YAML, alcanza con ejecutar:
+```shell
+docker-compose up -d
+```
 
+En cambio, si se realiza algún cambio en la definición de la imagen de contenedor, será necesario ejecutar
+```shell
+docker-compose up -d --build
+```
+
+Se pueden ver los resultados con cualquier editor de texto o mostrando la salida en pantalla, como por ejemplo:
+```shell
+cat data/output.json
+```
