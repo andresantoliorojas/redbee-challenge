@@ -50,11 +50,14 @@ Requisitos de uso:
 Modos/Ejemplos de uso
 
 - Filtrar del listado las aplicaciones que fueron modificadas en las ultimas 24 horas
+```shell
 ./json_filter.sh -f input.json -t 24 > output.json
+```
 
 - Filtrar del listado las aplicaciones que fueron modificadas en las ultimas 48 horas mostrando además si posee puertos duplicados/colisionados
+```shell
 ./json_filter.sh -f input.json -t 48 -d yes > output.json
-
+```
 
 ## Parte 2
 
