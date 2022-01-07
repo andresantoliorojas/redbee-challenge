@@ -1,0 +1,9 @@
+version: '2.4'
+services: 
+  jqtest:
+      build: ./
+      image: redbee:v1
+      container_name: "jqtest"
+      command: bash -c "/app/json_filter.sh -f /app/input.json -t 24 -d yes > /data/output.json"
+      volumes:
+        - ./data:/data
